@@ -1,0 +1,108 @@
+/*
+Responsive Mobile Toggle Menu v1.0
+Description: Mobile first responsive toggle menu IE8 and IE7 desktop fallback  
+CSS for demo3.html
+Author: Danielle Vautier
+*/
+
+/*Function*/
+label.menuTitle {
+	display:none;
+}
+
+.mainMenu ul { 
+	display:table!important;
+	border:0;
+	overflow:visible;
+	max-height:100%!important; 
+	text-align: center;
+}	
+
+.mainMenu ul li {
+	width:auto; 
+	display:table-cell; 
+	border:0; 
+}
+
+.mainMenu > ul ul {
+	float:left;
+	width:100%;
+	margin:0;
+	padding:0;
+}
+
+.mainMenu > ul ul {
+	display:none!important;
+	position: absolute;
+	left:0;
+	text-align: center;
+	&.display {
+		display:block !important;
+		z-index:20;
+	}
+	a {
+		width: 100%;
+		padding:10px;
+	}
+}
+
+.mainMenu > ul ul li {
+	display: inline-block;
+	width:auto;
+	padding:0;
+	margin:0;
+	border:0;
+}
+
+.mainMenu .toggleChildren {
+	display:none!important;
+}
+
+.mainMenu li {
+	border:0;
+	float: none;
+	font-size: 16px;	
+	&:hover {
+		a {
+			border-bottom:4px solid $orange;
+			text-decoration: none;
+		}
+	}
+	&.selected {
+
+		a {
+			color:$orange;
+			border-bottom:4px solid $orange;
+		}
+		li a {
+			color:#ffffff;
+		}
+	} 
+}
+
+.mainMenu a, .mainMenu a:visited {
+	padding:10px 3px 10px 8px;
+}
+
+
+.mainMenu > ul ul {
+		top:121px; /*height of your main nav*/
+		min-width:100%; /*Set your width*/
+		background-color:$orange;
+		li {
+			&:hover {
+				background-color:$darkOrange;
+				border:0;
+				a {
+					color:#ffffff;
+				}
+			}
+			a {
+				color:#ffffff;
+			}
+		}
+	}
+
+.mainMenu > ul ul a {
+	border:0;
+}

@@ -1,0 +1,284 @@
+/*
+Responsive Mobile Toggle Menu v2.2
+Description: Mobile first responsive toggle menu
+Author: Danielle Vautier
+*/
+
+/*Menu mobile first CSS*/
+body{ -webkit-animation: bugfix infinite 1s; }
+
+/*This fixes a chrome/webkit bug for older Android Browsers */
+// causing issues in safari 
+@-webkit-keyframes bugfix { from {padding:0;} to {padding:0;} } 
+
+/*Required functional CSS don't change this bit
+CSS styles are at the end! */
+
+.mainMenu {
+	display:block;
+	width:100%;
+	margin:0;
+	padding:0;
+	float:left;
+}
+
+#toggleMenu { 
+	display: none;
+}
+
+#toggleMenu:checked ~ ul {  
+	max-height:100%; /*Make page height*/ 
+	opacity:1;
+	display:block !important;
+}
+
+.mainMenu > ul {
+	width:100%;
+	margin:0;
+	padding:0;
+	list-style:none;
+	float:left;
+	overflow-y: hidden;
+	max-height:0;
+	text-align:center;
+	@include box-sizing();
+	z-index:100;
+}
+
+.mainMenu li {
+	// transition: all 0.2s ease;
+	margin:0;
+	padding:0;
+	white-space:nowrap;
+	display:block;
+	width:100%;
+	float:left;
+	font-size:14px;
+	@include box-sizing();
+	a {
+		transition: all 0.2s ease;
+		color:$darkGrey;
+		@include box-sizing();
+		&:hover {
+			color:$orange;
+		}
+	}
+}
+
+.mainMenu li ul li {
+	background-color:$orange;
+	a {
+		color:#ffffff;
+	}
+	&:hover {
+		background-color:$darkOrange;
+		border:0;
+		a {
+			color:#ffffff;
+		}
+	}
+}
+
+.mainMenu a, .mainMenu a:visited {
+	display:block;
+	font-weight:normal;
+	width:100%; /*required to make whole element clickable*/
+}
+
+label.menuTitle {
+	margin:0;
+	display:block;
+	cursor:pointer;
+	float:left;
+	border-bottom:2px solid $offWhite;
+	background: url('../images/menu.png');
+	background-image: url('../images/menu.svg'), none; 
+	background-repeat: no-repeat;
+	background-position: 97% 20px;
+	background-size: 24px; /*Make same size as your menu.png*/
+	&.open {
+		background: url('../images/cross.png');
+		background-image: url('../images/cross.png'), none;
+		background-repeat: no-repeat;
+		background-position: 97% 20px;
+		background-size: 24px; /*Make same size as your menu.png*/
+		@include highDPI() {
+			background-image: url('../images/cross-new.png');
+		}
+	}
+}
+
+@media screen and (max-width:767px) {
+	.mainMenu {
+		background-color:#ffffff;
+		position:relative;
+	}
+	.mainMenu ul {
+		border-bottom:2px solid $offWhite;
+	}
+	.mainMenu li {
+		padding:7px 0;
+	}
+	.mainMenu li ul li {
+		border-bottom:1px solid $paleOrange !important;
+		@include box-sizing();
+	}
+}
+
+@media screen and (min-width:400px) {
+	label.menuTitle {
+		display:none;
+	}
+	
+	.mainMenu ul { 
+		display:table!important;
+		border:0;
+		overflow:visible;
+		max-height:100%!important; 
+		text-align: center;
+	}	
+
+	.mainMenu ul li {
+		width:auto; 
+		display:table-cell; 
+		border:0; 
+	}
+}
+
+
+/* Child CSS Functionality - do not change*/
+.mainMenu > ul ul {
+	float:left;
+	width:100%;
+	margin:0;
+	padding:0;
+}
+
+@media screen and (min-width:400px) {
+		.mainMenu > ul ul {
+			display:none!important;
+			position: absolute;
+			left:0;
+			text-align: center;
+			&.display {
+				display:block !important;
+				z-index:20;
+			}
+			a {
+				width: 100%;
+				padding:10px;
+			}
+		}
+
+		.mainMenu > ul ul li {
+			display: inline-block;
+			width:auto;
+			padding:0;
+			margin:0;
+			border:0;
+		}
+
+		.mainMenu .toggleChildren {
+			display:none!important;
+		}
+	}
+	/*End Child CSS Functionality*/
+
+
+
+	/*Menu Styling CSS - change the below to suit your site!*/
+	
+	.mainMenu a, .mainMenu a:visited {
+		text-decoration:none;
+		width:94%; /*Use 100% and box-sizing if not supporting ie7*/
+		padding:5px 3%;
+		background: none;
+	}
+	
+	label.menuTitle {
+		font-size:20px;
+		width:94%;  /*Use 100% and box-sizing if not supporting ie7*/
+		padding:0 3%;
+		font-weight:bold;
+		a {
+			padding:0;
+		}
+	}
+	
+	@media screen and (min-width:400px) {
+
+		.mainMenu li {
+			border:0;
+			float: none;
+			font-size: 16px;	
+			&:hover {
+				a {
+					// border-bottom:4px solid $orange;
+					text-decoration: none;
+				}
+			}
+			&.selected {
+
+				a {
+					color:$orange;
+					// border-bottom:4px solid $orange;
+				}
+				li a {
+					color:#ffffff;
+				}
+			} 
+		}
+
+		.mainMenu a, .mainMenu a:visited {
+			padding:10px 3px 10px 8px;
+		}
+	}
+
+	/*Menu Child Styling*/
+	.mainMenu .toggleChildren {
+		float:right;
+		margin-right:3%;
+		width:30px; /*Note width is required */
+		height:30px; /*Customise to your menu height*/
+		padding:0;
+		display:block;
+		background:url(../images/nav-arrow.png) no-repeat center center;
+		background-size: 11px 8px; 
+	}
+
+	.mainMenu .toggleChildren.contract {
+		background:url(../images/nav-arrow-contract.png) no-repeat center center;
+		background-size: 11px 8px; 
+
+	}
+
+
+	@media screen and (min-width:400px) {
+		.mainMenu > ul > li:hover > a {
+		// color:#ffffff;
+	}
+
+	.mainMenu > ul ul {
+		top:121px; /*height of your main nav*/
+		min-width:100%; /*Set your width*/
+		background-color:$orange;
+		li {
+			&:hover {
+				background-color:$darkOrange;
+				border:0;
+				a {
+					color:#ffffff;
+				}
+			}
+			a {
+				color:#ffffff;
+			}
+		}
+	}
+
+	.mainMenu > ul ul a {
+		border:0;
+	}
+}
+
+// End Menu Child Styling
