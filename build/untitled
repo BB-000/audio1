@@ -1,0 +1,29 @@
+<%= partial "header" %>
+<div class="container">
+	
+
+<div class="wrapper-container">
+	
+<div class="grid js-masonry"
+  data-masonry-options='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
+  <div class="grid-item"><img src="https:/placehold.it/300x400" alt=""></div>
+  <div class="grid-item"><img src="https:/placehold.it/300x400" alt=""></div>
+  <div class="grid-item"><img src="https:/placehold.it/300x400" alt=""></div>
+  <div class="grid-item"><img src="https:/placehold.it/300x400" alt=""></div>
+  <div class="grid-item"><img src="https:/placehold.it/300x400" alt=""></div>
+  <div class="grid-item"><img src="https:/placehold.it/300x400" alt=""></div>
+  <div class="grid-item"><img src="https:/placehold.it/300x400" alt=""></div>
+  <div class="grid-item"><img src="https:/placehold.it/300x400" alt=""></div>
+
+  
+</div>
+
+</div>
+
+
+
+
+
+</div><!-- end container -->
+
+<%= partial "footer" %>

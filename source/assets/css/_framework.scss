@@ -38,6 +38,14 @@
 }
 
 @include viewport(600) {
+
+		.wrapper-25.openMore {
+		  .content-list & {
+		    	width: 100%;
+		    }
+		}
+
+
 	.wrapper-50 {
 		width:50%;
 
@@ -96,6 +104,13 @@
 }
 
 @include viewport(660) {
+
+	.wrapper-25.openMore {
+		  .content-list & {
+		    	width: 20%;
+		    }
+		}
+
 	.wrapper-66 {
 		width:66.66%;
 
@@ -144,6 +159,9 @@
 @include viewport(768) {
 	.wrapper-25 {
 		width:25%;
+		  .content-list & {
+		    	width: 20%;
+		    }
 
 		.padded-content {
 			padding:8%;
@@ -185,6 +203,7 @@
 	.wrapper-75 + .wrapper-25, .wrapper-25.with-75-right  {
 		width:25%;
 
+
 		.padded-content {
 			padding:8%;
 			width:84%;
@@ -199,6 +218,8 @@
 		    &:first-child {
 		      margin-left:0;
 		    }
+
+
 		}
 
 		.wrapper-75 {

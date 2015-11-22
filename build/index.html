@@ -5,7 +5,7 @@
 <!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->        
 <head>
 	<meta charset="utf-8">
-	<title>Site Title</title>
+	<title>Groove Deluxe</title>
 	
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
@@ -14,6 +14,10 @@
     <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
 
     <script src="assets/scripts/modernizr-2.8.3.min.js" type="text/javascript"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+
     
 
    <!--[if IE]>
@@ -28,10 +32,15 @@
 </head>
 
 <body>
-<header>  
+<header class="group">  
      <!-- .container is used if there are full width elements on the page otherwise just have one wrapper -->
     <div class="container">
-        <h1>Company</h1>
+        <h1 class="center main-title"><a href="home.html">Groove Deluxe</a></h1>
+
+
+
+
+
         <!-- helpful shortcute for screen readers -->
         <section class="accessibility-help hide">
             <h2 class="hide">Accessibility links</h2>
@@ -40,140 +49,304 @@
             </ul> 
         </section>
         
-        <nav>
-        </nav>
+           
+    <div class="container">
+  <nav class="mainMenu"><!-- "nav" is an HTML5 element, you can use div if required or https://github.com/aFarkas/html5shiv to force support in ie7 and ie8 -->
+        <label for="toggleMenu" class="menuTitle" onclick="">MENU</label>
+        <!-- onclick overwrides iOS 6 and Android 4.3  --> 
+        <input type="checkbox" id="toggleMenu" />
+        <ul>
+            <li class="animated fadeInUp"><a href="music.html">Music</a></li>
+            <li class="animated fadeInUp"><a href="#">About</a></li>
+            <li class="animated fadeInUp"><a href="art.html">Art</a></li>
+            <li class="animated fadeInUp"><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    </div>
     
     </div>
 </header>
 
-<div id="main-content"><div class="container">
-	<div class="wrapper-100">
-		<div class="padded-content">
-			<h1>.wrapper-100</h1>
-			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed commodo dolor, ac dapibus enim. Duis tincidunt est at sapien pharetra, et congue odio viverra.</p>
-			<p><strong>Suspendisse metus</strong> nisl, fringilla sed laoreet vitae, vestibulum at orci. Pellentesque elit mauris, finibus sit amet enim sed, faucibus cursus neque. Curabitur gravida orci sit amet enim rhoncus viverra. Suspendisse gravida massa eu justo tincidunt porta. Maecenas tempus accumsan ante at sodales. Proin nec consectetur lectus, ac tempor elit. Nulla non euismod elit. Sed eu sagittis arcu.</p>
-		</div>
+<div id="main-content" class="group"><div class="container">
+	
+
+<div class="wrapper-container">
+
+
+
+
+
+<ul class="content-list">
+	<!-- <div class="tab"> -->
+	<li class="wrapper-25 img-block wow fadeIn"  data-wow-delay="0s">
+		<img src="http://lorempixel.com/200/200/nightlife" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.2s">
+		<img src="http://lorempixel.com/200/200/nightlife" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.4s">
+		<img src="http://lorempixel.com/200/200/nightlife" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.6s">
+		<img src="http://lorempixel.com/200/200/nightlife" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn openMore" data-wow-delay="0.8s">
+		<div class="show-arrow"></div>
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<div id="g1-1" class="show-more">
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.2s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.4s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>		
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.6s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
+		<li class="wrapper-25 img-block wow fadeIn openMore" data-wow-delay="0.8s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
 	</div>
-	<div class="wrapper-container with-margin with-equal-height">
-		<div class="wrapper-50">
-			<div class="padded-content">
-				<h2>.wrapper-50</h2>
-				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed commodo dolor, ac dapibus enim. Duis tincidunt est at sapien pharetra, et congue odio viverra.</p>
-				<p>Suspendisse metus nisl, fringilla sed laoreet vitae, vestibulum at orci. Pellentesque elit mauris, finibus sitetur lectus, ac tempor elit. Nulla non euismod elit. Sed eu sagittis arcu.</p>
-			</div>
-		</div>
-		<div class="wrapper-50">
-			<div class="padded-content">
-				<h2>.wrapper-50</h2>
-				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed commodo dolor, ac dapibus enim. Duis tincidunt est at sapien pharetra, et congue odio viverra.</p>
-				<p>Suspendisse metus nisl, fringilla sed laoreet vitae, vestibulum at orci. Pellentesque elit mauris, finibus sit amet enim sed, faucibus cursus neque. Curabitur gravida orci sit amet enim rhoncus viverra. Suspendisse gravida massa eu justo tincidunt porta. Maecenas tempus accumsan ante at sodales. Proin nec consectetur lectus, ac tempor elit. Nulla non euismod elit. Sed eu sagittis arcu.</p>
-			</div>
-		</div>
+<!-- </div> -->
+</ul>
+
+<ul class="content-list">
+	<!-- <div class="tab"> -->
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0s">
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.2s">
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.4s">
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.6s">
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn openMore" data-wow-delay="0.8s">
+		<div class="show-arrow"></div>
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<div id="g1-1" class="show-more">
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.2s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.4s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>		
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.6s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
+		<li class="wrapper-25 img-block wow fadeIn openMore" data-wow-delay="0.8s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
 	</div>
-	<div class="wrapper-container with-margin with-equal-height">
-		<div class="wrapper-33">
-			<div class="padded-content">
-				<h3>.wrapper-33</h3>
-				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed commodo dolor, ac dapibus enim. Duis tincidunt est at sapien pharetra, et congue odio viverra.</p>
-				<p>Suspendisse metus nisl, fringilla sed laoreet vitae, vestibulum at orci. Pellentesque elit mauris, finibus sit amet enim sed, faucibus cursus neque. Curabitur gravida orci sit amet enim rhoncus viverra. Suspendisse gravida massa eu justo tincidunt porta. Maecenas tempus accumsan ante at sodales. Proin nec consectetur lectus, ac tempor elit. Nulla non euismod elit. Sed eu sagittis arcu.</p>
-			</div>
-		</div>
-		<div class="wrapper-33">
-			<div class="padded-content">
-				<h3>.wrapper-33</h3>
-				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed commodo dolor, ac dapibus enim. Duis tincidunt est at sapien pharetra, et congue odio viverra.</p>
-			</div>
-		</div>
-		<div class="wrapper-33">
-			<div class="padded-content">
-				<h3>.wrapper-33</h3>
-				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed commodo dolor, ac dapibus enim. Duis tincidunt est at sapien pharetra, et congue odio viverra.</p>
-				<p>Suspendisse metus nisl, fringilla sed laoreet vitae, vestibulum at orci. Pellentesque elit mauris, finibus sit amet enim sed, faucibus cursus neque. Curabitur gravida orci sit amet enim rhoncus viverra. Suspendisse gravida massa eu justo tincidunt porta. Maecenas tempus accumsan ante at sodales. Proin nec consectetur lectus, ac tempor elit. Nulla non euismod elit. Sed eu sagittis arcu.</p>
-			</div>
-		</div>
+<!-- </div> -->
+</ul>
+
+<ul class="content-list">
+	<!-- <div class="tab"> -->
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0s">
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.2s">
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.4s">
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.6s">
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn openMore" data-wow-delay="0.8s">
+		<div class="show-arrow "></div>
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<div id="g1-1" class="show-more">
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.2s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.4s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>		
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.6s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
+		<li class="wrapper-25 img-block wow fadeIn openMore" data-wow-delay="0.8s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
 	</div>
-	<div class="wrapper-container with-margin with-equal-height">
-		<div class="wrapper-25">
-			<div class="padded-content">
-				<h4>.wrapper-25</h4>
-				<p>Suspendisse metus nisl, fringilla sed laoreet vitae, vestibulum at orci. Pellentesque elit mauris, finibus sit amet enim sed, faucibus cursus neque. Curabitur gravida orci sit amet enim rhoncus viverra. Suspendisse gravida massa eu justo tincidunt porta. Maecenas tempus accumsan ante at sodales. Proin nec consectetur lectus, ac tempor elit. Nulla non euismod elit. Sed eu sagittis arcu.</p>
-			</div>
-		</div>
-		<div class="wrapper-25">
-			<div class="padded-content">
-				<h4>.wrapper-25</h4>
-				<p>Suspendisse metus nisl, fringilla sed laoreet vitae, vestibulum at orci. Pellentesque elit mauris, finibus sit amet enim sed,</p>
-			</div>
-		</div>
-		<div class="wrapper-25">
-			<div class="padded-content">
-				<h4>.wrapper-25</h4>
-				<p>Suspendisse metus nisl, fringilla sed laoreet vitae, vestibulum at orci. Pellentesque elit mauris, finibus sit amet enim sed, faucibus cursus neque. Curabitur gravida orci sit amet enim rhoncus viverra. Suspendisse gravida massa eu justo tincidunt porta. Maecenas tempus accumsan ante at sodales. Proin nec consectetur lectus, ac tempor elit. Nulla non euismod elit. Sed eu sagittis arcu.</p>
-			</div>
-		</div>
-		<div class="wrapper-25">
-			<div class="padded-content">
-				<h4>.wrapper-25</h4>
-				<p>Suspendisse metus nisl, fringilla sed laoreet vitae, vestibulum at orci. Pellentesque elit mauris, finibus sit amet enim sed, faucibus cursus neque. Curabitur gravida orci sit amet enim rhoncus viverra. Suspendisse gravida massa eu justo tincidunt porta. Maecenas tempus accumsan ante at sodales. Proin nec consectetur lectus, ac tempor elit. Nulla non euismod elit. Sed eu sagittis arcu.</p>
-			</div>
-		</div>
+<!-- </div> -->
+</ul>
+
+<ul class="content-list">
+	<!-- <div class="tab"> -->
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0s">
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.2s">
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.4s">
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.6s">
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn openMore" data-wow-delay="0.8s">
+		<div class="show-arrow "></div>
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<div id="g1-1" class="show-more">
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.2s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.4s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>		
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.6s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
+		<li class="wrapper-25 img-block wow fadeIn openMore" data-wow-delay="0.8s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
 	</div>
-	<div class="wrapper-container with-margin with-equal-height">
-		<div class="wrapper-25 with-75-right">
-			<div class="padded-content">
-				<h4>.wrapper-25</h4>
-				<p>Suspendisse metus nisl, fringilla sed laoreet vitae, vestibulum at orci. Pellentesque elit mauris, finibus sit amet enim sed, faucibus cursus neque. Curabitur gravida orci sit amet enim rhoncus viverra. Suspendisse gravida massa eu justo tincidunt porta. Maecenas tempus accumsan ante at sodales. Proin nec consectetur lectus, ac tempor elit. Nulla non euismod elit. Sed eu sagittis arcu.</p>
-			</div>
-		</div>
-		<div class="wrapper-75">
-			<div class="padded-content">
-				<h4>.wrapper-75</h4>
-				<p>Suspendisse metus nisl, fringilla sezd laoreet vitae, vestibulum at orci. Pellentesque elit mauris, finibus sit amet enim sed, faucibus cursus neque. Curabitur gravida orci sit amet en.</p>
-			</div>
-		</div>
+<!-- </div> -->
+</ul>
+
+<ul class="content-list">
+	<!-- <div class="tab"> -->
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0s">
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.2s">
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.4s">
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.6s">
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn openMore" data-wow-delay="0.8s">
+		<div class="show-arrow "></div>
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<div id="g1-1" class="show-more">
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.2s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.4s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>		
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.6s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
+		<li class="wrapper-25 img-block wow fadeIn openMore" data-wow-delay="0.8s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
 	</div>
-	<div class="wrapper-container with-margin with-equal-height">
-		<div class="wrapper-75">
-			<div class="padded-content">
-				<h4>.wrapper-75</h4>
-				<p>Suspendisse metus nisl, fringilla sed laoreet vitae, vestibulum at orci. Pellentesque elit mauris, finibus sit amet enim sed, faucibus cursus neque. Curabitur gravida orci sit amet enim rhoncus viverra. Suspendisse gravida massa eu justo tincidunt porta. Maecenas tempus accumsan ante at sodales. Proin nec consectetur lectus, ac tempor elit. Nulla non euismod elit. Sed eu sagittis arcu.</p>
-			</div>
-		</div>
-		<div class="wrapper-25">
-			<div class="padded-content">
-				<h4>.wrapper-25</h4>
-				<p>Suspendisse metus nisl, fringilla sed laoreet vitae, vestibulum at orci. Pellentesque elit mauris, finibus sit amet enim sed, faucibus cursus neque. Curabitur gravida orci sit amet en.</p>
-			</div>
-		</div>
+<!-- </div> -->
+</ul>
+
+<ul class="content-list">
+	<!-- <div class="tab"> -->
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0s">
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.2s">
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.4s">
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.6s">
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn openMore" data-wow-delay="0.8s">
+		<div class="show-arrow "></div>
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<div id="g1-1" class="show-more">
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.2s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.4s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>		
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.6s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
+		<li class="wrapper-25 img-block wow fadeIn openMore" data-wow-delay="0.8s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
 	</div>
-	<div class="wrapper-container with-margin with-equal-height">
-		<div class="wrapper-66">
-			<div class="padded-content">
-				<h4>.wrapper-66</h4>
-				<p>Suspendisse metus nisl, fringilla sed laoreet vitae, vestibulum at orci. Pellentesque elit mauris, finibus sit amet enim sed, faucibus cursus neque. Curabitur gravida orci sit amet enim rhoncus viverra. Suspendisse gravida massa eu justo tincidunt porta. Maecenas tempus accumsan ante at sodales. Proin nec consectetur lectus, ac tempor elit. Nulla non euismod elit. Sed eu sagittis arcu.</p>
-			</div>
-		</div>
-		<div class="wrapper-33">
-			<div class="padded-content">
-				<h4>.wrapper-33</h4>
-				<p>Suspendisse metus nisl, fringilla sed laoreet vitae, vestibulum at orci. Pellentesque elit mauris, finibus sit amet enim sed, faucibus cursus neque. Curabitur gravida orci sit amet en.</p>
-			</div>
-		</div>
+<!-- </div> -->
+</ul>
+
+<ul class="content-list">
+	<!-- <div class="tab"> -->
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0s">
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.2s">
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.4s">
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.6s">
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<li class="wrapper-25 img-block wow fadeIn openMore" data-wow-delay="0.8s">
+		<div class="show-arrow "></div>
+		<img src="http://lorempixel.com/200/200" alt="#">
+	</li>
+	<div id="g1-1" class="show-more">
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.2s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.4s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>		
+		<li class="wrapper-25 img-block wow fadeIn" data-wow-delay="0.6s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
+		<li class="wrapper-25 img-block wow fadeIn openMore" data-wow-delay="0.8s">
+			<img src="http://lorempixel.com/200/200/abstact" alt="#">
+		</li>
 	</div>
-	<div class="wrapper-container with-margin with-equal-height">
-		<div class="wrapper-33">
-			<div class="padded-content">
-				<h4>.wrapper-33</h4>
-				<p>Suspendisse metus nisl, fringilla sed laoreet vitae, vestibulum at orci. Pellentesque elit mauris, finibus sit amet enim sed, faucibus cursus neque. Curabitur gravida orci sit amet enim rhoncus viverra. Suspendisse gravida massa eu justo tincidunt porta. Maecenas tempus accumsan ante at sodales. Proin nec consectetur lectus, ac tempor elit. Nulla non euismod elit. Sed eu sagittis arcu.</p>
-			</div>
-		</div>
-		<div class="wrapper-66">
-			<div class="padded-content">
-				<h4>.wrapper-66</h4>
-				<p>Suspendisse metus nisl, fringilla sed laoreet vitae, vestibulum at orci. Pellentesque elit mauris, finibus sit amet enim sed, faucibus cursus neque. Curabitur gravida orci sit amet en.</p>
-			</div>
-		</div>
-	</div>
+<!-- </div> -->
+</ul>
+
+</div>
+
+
+
+
 
 </div><!-- end container -->
 
@@ -186,13 +359,36 @@
 <script>window.jQuery || document.write('<script src="assets/scripts/jquery-1.11.3.min.js"><\/script>')</script>
 
 <!-- For any custom JS -->
-<script src="assets/scripts/custom.js?v=1.0" type="text/javascript"></script>
+<script src="assets/scripts/masonry-2.1.08.min.js" type="text/javascript"></script>
+<script src="assets/scripts/custom.js" type="text/javascript"></script>
 
 <script>
-$(function() {
+ var $container = $('.masonryify');
+$container.imagesLoaded(function(){
+  $container.masonry({
+    itemSelector : '.masonry-item',
+    columnWidth: function( containerWidth ) {
+      return containerWidth / 3;
+    }()  // () to execute the anonymous function right away and use its result
+  });
 
-})
+}) 
+
+// $(window).resize(function () {
+//   $container.masonry('bindResize');
+// });
 </script>
+
+
+<!-- For any custom JS -->
+<!--[if gt IE 8]><!-->
+<script src="assets/scripts/wow.min.js"></script>
+<script>
+	new WOW().init();
+</script>
+<!--<![endif]-->
+
+
 
 
 </body>
