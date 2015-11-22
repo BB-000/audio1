@@ -29,6 +29,18 @@ $("li.openMore").click(function(){
     $(this).parent().find('.show-arrow').toggleClass('rotate');
 });
 
+$('.vid_trigger').click( function(e){
+e.preventDefault();
+var URL = $(this).attr('href');
+var htm = '<iframe width="200" height="200" src="http://www.youtube.com/embed/' + URL + '?rel=0" frameborder="0" allowfullscreen ></iframe>';
+
+    $('#video_container').html(htm);
+
+return false;
+});
+
+
+
 // $(".openMore").click(function(){
 //     $(this).parent().next('.show-more').fadeToggle();
 // });
