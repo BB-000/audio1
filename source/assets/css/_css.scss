@@ -167,9 +167,9 @@ button, input[type="submit"], .button {
 	position: relative;
 	// padding-bottom: 20%;
 	transition: all 1s;
-	img, iframe {
-		width: 100%;
-		height: 100%;
+	img, iframe, video {
+		// width: 100%;
+		// height: 100%;
 	}
 	&:hover {
 		
@@ -178,11 +178,9 @@ button, input[type="submit"], .button {
 	}
 
 	a {
-	 position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
-		display: block;
-		height: 60px;
-		width: 60px;
+	// display: inline-block;
+    // height: 100%;
+    // width:100%;
 	}
 
 }
@@ -200,11 +198,17 @@ button, input[type="submit"], .button {
 
 .content-list {
 	list-style-type: none;
-	padding: 0 0 0 10%;
-	// padding: 0;
+	// padding: 0 0 0 10%;
+	padding: 0;
 	// background-color: green;
 	clear: both;
-	overflow: auto;
+	// overflow: auto;
+	position: relative;
+
+
+	// background-image: url(../images/chill-tile.jpg);
+    // repeat-x: no-repeat;
+    // background-repeat: repeat-y;
 
 	&:nth-child(4){
 
@@ -252,7 +256,15 @@ button, input[type="submit"], .button {
 }
 
 header {
-	background-image: url("../images/subtle_grunge.png")
+	// background-image: url("../images/subtle_grunge.png");
+	background-image: url("../images/BANNER1.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 0px 15px;
+	height: 110px;
+	@include viewport(600){
+		height: 160px;
+	}
 }
 
 .art {
@@ -288,5 +300,56 @@ header {
 
 
 
+
+
+
+
+
+
+
+
+
+
+/* Responsive IFRAME Embed Encoding 
+   Adapts fixed pixel IFRAME sizes and makes them responsive. */
+
+
+/* First, define the common wrapper elements 
+   Padding-top is for the fixed height header of the embedded content */
+
+.youtubeWrapper, .vimeoWrapper, .instagramWrapper {
+    position: relative;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+
+
+/* Set the padding-bottom for 16:9 aspect ratio video from YouTube & Vimeo */ 
+.youtubeWrapper, .vimeoWrapper {
+    padding-bottom: 56.25%;      
+}
+
+/* Set padding-bottom for 5:6 aspect ratio Instagram content */
+.instagramWrapper {
+  padding-bottom: 120%;
+}
+    
+/* For each content source, set the IFRAME to be top left and occupy 100% of width and height of the containing DIV wrapper */    
+.img-block iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.mode {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 220px;
+    background-color: green;
+}
 
 

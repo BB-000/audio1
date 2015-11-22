@@ -39,12 +39,11 @@
 
 @include viewport(600) {
 
-		.wrapper-25.openMore {
+	.wrapper-25.openMore {
 		  .content-list & {
 		    	width: 100%;
 		    }
 		}
-
 
 	.wrapper-50 {
 		width:50%;
@@ -105,11 +104,6 @@
 
 @include viewport(660) {
 
-	.wrapper-25.openMore {
-		  .content-list & {
-		    	width: 20%;
-		    }
-		}
 
 	.wrapper-66 {
 		width:66.66%;
@@ -159,8 +153,12 @@
 @include viewport(768) {
 	.wrapper-25 {
 		width:25%;
+
 		  .content-list & {
 		    	width: 20%;
+		    	&.openMore {
+		    		width: 20%;
+		    	}
 		    }
 
 		.padded-content {
