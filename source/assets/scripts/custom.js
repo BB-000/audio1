@@ -75,6 +75,11 @@ $('.video-container img').click(function(){console.log("img-press")});
 
 
 
+
+// $('li.img-block').click(repllace($('li.img-block'), "aiLhr375fC8", 200,200, true));
+
+
+
 // $(document).on('click','.img-block',function(e){
 //     $(this img).hide();
 //     $('#ytvideo').html('<iframe width="939" height="528" id="ytvideo" frameborder="0" allowfullscreen src="http://www.youtube.com/embed/'+$(this).attr("data-vidid")+'?autoplay=1"></iframe>').show();
@@ -82,7 +87,9 @@ $('.video-container img').click(function(){console.log("img-press")});
 
 
 
-
+// $( window ).resize(function() {
+// $('li.img-block').css
+// });
 
 
 // $(".openMore").click(function(){
@@ -100,6 +107,13 @@ $('.video-container img').click(function(){console.log("img-press")});
 
 }); 
 
+var repllace = function replaceThumbforYoutubeVideo(element,videoid,width,height,autosize){
+  if (autosize=="true"){
+    width=jQuery(element).width();
+    height=jQuery(element).height();
+  }
+  jQuery(element).replaceWith("<li class='wrapper-25 sqr img-block' style='width:"+width+"px;height:"+height+"px;'><iframe width='"+width+"' height='"+height+"' src='http://www.youtube.com/embed/"+videoid+"?autoplay=1' frameborder='0' allowfullscreen></iframe></li>");
+}
 
 
 // $('.show-arrow').click(function(){
