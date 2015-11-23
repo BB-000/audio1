@@ -68,11 +68,21 @@ $("li.openMore").click(function(){
 
 
 
-$('.video-container').click(function(){console.log("vid-press")});
-$('.video-container img').click(function(){console.log("img-press")});
+$('.img-block').click(function(){console.log("vid-press")});
+$('.img-block img').click(function(){console.log("img-press")});
 
 
 
+$('.img-block').not('.openMore').click(function(){
+
+  // console.log($(this).children().attr('vid'));
+  var embedd = $(this).children().attr('vid');
+  console.log(embedd);
+  
+  $(this).append('<iframe frameborder="0" allowfullscreen src="http://www.youtube.com/embed/'+embedd+'?autoplay=1"></iframe>');
+  
+
+});
 
 
 
@@ -105,6 +115,27 @@ $('.video-container img').click(function(){console.log("img-press")});
   //   	$( this ).toggleClass( "rotate" );
   //   })
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }); 
 
 var repllace = function replaceThumbforYoutubeVideo(element,videoid,width,height,autosize){
@@ -114,6 +145,10 @@ var repllace = function replaceThumbforYoutubeVideo(element,videoid,width,height
   }
   jQuery(element).replaceWith("<li class='wrapper-25 sqr img-block' style='width:"+width+"px;height:"+height+"px;'><iframe width='"+width+"' height='"+height+"' src='http://www.youtube.com/embed/"+videoid+"?autoplay=1' allowfullscreen></iframe></li>");
 }
+
+
+
+
 
 
 

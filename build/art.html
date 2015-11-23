@@ -35,7 +35,7 @@
 <header class="group">  
      <!-- .container is used if there are full width elements on the page otherwise just have one wrapper -->
     <div class="container">
-        <h1 class="center main-title"><a href="home.html">Groove Deluxe</a></h1>
+        <h1 class="center main-title hide"><a href="">Groove Deluxe</a></h1>
 
 
 
@@ -56,7 +56,7 @@
         <!-- onclick overwrides iOS 6 and Android 4.3  --> 
         <input type="checkbox" id="toggleMenu" />
         <ul>
-            <li class="animated fadeInUp"><a href="music.html">Music</a></li>
+            <li class="animated fadeInUp"><a href="home.html">Music</a></li>
             <li class="animated fadeInUp"><a href="#">About</a></li>
             <li class="animated fadeInUp"><a href="art.html">Art</a></li>
             <li class="animated fadeInUp"><a href="#">Contact</a></li>
@@ -136,6 +136,50 @@ $container.imagesLoaded(function(){
 <!--<![endif]-->
 
 
+<script>
+function init() {
+var imgDefer = document.getElementsByTagName('img');
+for (var i=0; i<imgDefer.length; i++) {
+if(imgDefer[i].getAttribute('data-src')) {
+imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+} } }
+window.onload = init;
+</script>
+
+
+
+<script>
+
+
+
+var tag = document.createElement('script');
+tag.src = "//www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+function onYouTubeIframeAPIReady() {
+    var $ = jQuery;
+    var players = [];
+    $('iframe').filter(function(){return this.src.indexOf('http://www.youtube.com/') == 0}).each( function (k, v) {
+        if (!this.id) { this.id='embeddedvideoiframe' + k }
+        players.push(new YT.Player(this.id, {
+            events: {
+                'onStateChange': function(event) {
+                    if (event.data == YT.PlayerState.PLAYING) {
+                        $.each(players, function(k, v) {
+                            if (this.getIframe().id != event.target.getIframe().id) {
+                                this.pauseVideo();
+                            }
+                        });
+                    }
+                }
+            }
+        }))
+    });
+}
+
+
+</script>
 
 
 </body>
