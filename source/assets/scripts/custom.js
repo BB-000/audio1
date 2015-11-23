@@ -112,8 +112,15 @@ var repllace = function replaceThumbforYoutubeVideo(element,videoid,width,height
     width=jQuery(element).width();
     height=jQuery(element).height();
   }
-  jQuery(element).replaceWith("<li class='wrapper-25 sqr img-block' style='width:"+width+"px;height:"+height+"px;'><iframe width='"+width+"' height='"+height+"' src='http://www.youtube.com/embed/"+videoid+"?autoplay=1' frameborder='0' allowfullscreen></iframe></li>");
+  jQuery(element).replaceWith("<li class='wrapper-25 sqr img-block' style='width:"+width+"px;height:"+height+"px;'><iframe width='"+width+"' height='"+height+"' src='http://www.youtube.com/embed/"+videoid+"?autoplay=1' allowfullscreen></iframe></li>");
 }
+
+
+
+
+
+
+
 
 
 // $('.show-arrow').click(function(){
