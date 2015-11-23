@@ -210,9 +210,6 @@ button, input[type="submit"], .button {
     // repeat-x: no-repeat;
     // background-repeat: repeat-y;
 
-	&:nth-child(4){
-
-	}
 
 	// margin-bottom: 10px;
 }
@@ -249,7 +246,19 @@ button, input[type="submit"], .button {
 
 }
 
-.open-more{ opacity: 0.6; }
+.openMore{ 
+	opacity: 0.8; 
+	transform: scaleY(.25);
+	margin: -38% 0;
+	@include viewport(768){
+		margin: 0;
+		transform: scaleY(1);
+		transform: initial;
+	}
+
+
+
+}
 
 .show-more {
 	display: none;
@@ -260,10 +269,17 @@ header {
 	background-image: url("../images/BANNER1.jpg");
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-position: 0px 15px;
+	background-position: 0px 24px;
 	height: 110px;
+	@include viewport(400){
+	    background-position: -40px 10px;
+	}
 	@include viewport(600){
 		height: 160px;
+		 background-position: -90px 0px;
+	}
+	@include viewport(1000){
+		 background-position: -10px 0px;
 	}
 }
 

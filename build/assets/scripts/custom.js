@@ -79,8 +79,19 @@ $('.img-block').not('.openMore').click(function(){
   var embedd = $(this).children().attr('vid');
   console.log(embedd);
   
-  $(this).append('<iframe frameborder="0" allowfullscreen src="http://www.youtube.com/embed/'+embedd+'?autoplay=1"></iframe>');
+  // $('iframe[src*="http://www.youtube.com/embed/"]').each(function(i) {
+   // this.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')});
+
+
+  $(this).append('<iframe frameborder="0" allowfullscreen="1" title="YouTube video player" src="http://www.youtube.com/embed/'+embedd+'?autoplay=1?enablejsapi=1"></iframe>');
   
+
+  // $('iframe[src*="http://www.youtube.com/embed/"]').each(function(i) {
+  //   this.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+  //   console.log("hello");
+  // });
+ 
+
 
 });
 
