@@ -289,6 +289,9 @@ header {
 
 .mainMenu a {
 	font-size: 20px;
+	@include viewport(600){
+	font-size: 26px;
+}
 }
 
 

@@ -31,7 +31,6 @@ $("li.openMore").click(function(){
 
     // var hite = $(this).parent().height();
     // $('.mode').css("height", hite+"px");
-
 });
 
 // $('.vid_trigger').click( function(e){
@@ -73,7 +72,8 @@ $('.img-block img').click(function(){console.log("img-press")});
 
 
 
-$('.img-block').not('.openMore').click(function(){
+// $('.img-block').not('.openMore').click(function(){
+$('.img-block').click(function(){
 
   // console.log($(this).children().attr('vid'));
   var embedd = $(this).children().attr('vid');
@@ -91,6 +91,8 @@ $('.img-block').not('.openMore').click(function(){
   //   console.log("hello");
   // });
  
+
+
 
 
 });
@@ -125,26 +127,6 @@ $('.img-block').not('.openMore').click(function(){
   // $('.show-arrow').click(function() {
   //   	$( this ).toggleClass( "rotate" );
   //   })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }); 
@@ -221,3 +203,21 @@ var repllace = function replaceThumbforYoutubeVideo(element,videoid,width,height
 
 // $('.show-arrow').click()
 
+
+$( document ).ready( function() {
+
+
+ var $container = $('.grid').isotope({
+    itemSelector: '.element-item',
+    layoutMode: 'fitRows'
+
+  });
+
+ $('.filter-button-group').on( 'click', 'button', function() {
+  var filterValue = $(this).attr('data-filter');
+  console.log($(this).attr('data-filter'));
+  $container.isotope({ filter: filterValue });
+});
+
+
+});
