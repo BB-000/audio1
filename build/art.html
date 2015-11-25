@@ -74,27 +74,33 @@
 
 <div id="main-content" class="group"><div class="container">
 	
-<section class="masonry-wrapper art">
-<div class="wrapper-container masonryfy">
+<section class="art">
+
+<!-- <div class="wrapper-container masonryfy"> -->
 	
-<div class="masonry-wrapper" data-masonry-options='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
-  <div class="masonry-item wrapper-25"><img src="https:/placehold.it/600x600" alt=""></div>
-  <div class="masonry-item wrapper-25"><img src="https:/placehold.it/600x600" alt=""></div>
-  <div class="masonry-item wrapper-25"><img src="https:/placehold.it/600x600" alt=""></div>
-  <div class="masonry-item wrapper-25"><img src="https:/placehold.it/600x600" alt=""></div>
-  <div class="masonry-item wrapper-25"><img src="https:/placehold.it/600x600" alt=""></div>
-  <div class="masonry-item wrapper-25"><img src="https:/placehold.it/600x600" alt=""></div>
-  <div class="masonry-item wrapper-25"><img src="https:/placehold.it/600x600" alt=""></div>
-  <div class="masonry-item wrapper-25"><img src="https:/placehold.it/600x600" alt=""></div>
-  <div class="masonry-item wrapper-25"><img src="https:/placehold.it/600x600" alt=""></div>
-  <div class="masonry-item wrapper-25"><img src="https:/placehold.it/600x600" alt=""></div>
-  <div class="masonry-item wrapper-25"><img src="https:/placehold.it/600x600" alt=""></div>
+<div class="masonry-wrapper masonryify" data-masonry-options='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
+  <div class="masonry-item wrapper-25"><img src="assets/images/testingimg/tmp-img1.jpg" alt="#"></div>
+  <div class="masonry-item wrapper-25"><img src="assets/images/testingimg/tmp-img2.jpg" alt="#"></div>
+  <div class="masonry-item wrapper-25"><img src="assets/images/testingimg/tmp-img3.jpg" alt="#"></div>
+  <div class="masonry-item wrapper-25"><img src="assets/images/testingimg/tmp-img4.jpg" alt="#"></div>
+  <div class="masonry-item wrapper-25"><img src="assets/images/testingimg/tmp-img7.jpg" alt="#"></div>
+  <div class="masonry-item wrapper-25"><img src="assets/images/testingimg/tmp-img5.jpg" alt="#"></div>
+  <div class="masonry-item wrapper-25"><img src="assets/images/testingimg/tmp-img6.jpg" alt="#"></div>
+  <div class="masonry-item wrapper-25"><img src="assets/images/testingimg/tmp-img7.jpg" alt="#"></div>
+  <div class="masonry-item wrapper-25"><img src="assets/images/testingimg/tmp-img8.jpg" alt="#"></div>
+  <div class="masonry-item wrapper-25"><img src="assets/images/testingimg/tmp-img9.jpg" alt="#"></div>
+  <div class="masonry-item wrapper-25"><img src="assets/images/testingimg/tmp-img10.jpg" alt="#"></div>
+  <div class="masonry-item wrapper-25"><img src="assets/images/testingimg/tmp-img11.jpg" alt="#"></div>
+  <div class="masonry-item wrapper-25"><img src="assets/images/testingimg/tmp-img12.jpg" alt="#"></div>
+  <div class="masonry-item wrapper-25"><img src="assets/images/testingimg/tmp-img13.jpg" alt="#"></div>
+  <div class="masonry-item wrapper-25"><img src="assets/images/testingimg/tmp-img14.jpg" alt="#"></div>
+  
 
 
   
 </div>
 
-</div>
+<!-- </div> -->
 
 </section>
 
@@ -116,9 +122,9 @@
 <script src="assets/scripts/custom.js" type="text/javascript"></script>
 
 <script>
- var $container = $('.masonryify');
-$container.imagesLoaded(function(){
-  $container.masonry({
+ var $mmcontainer = $('.masonryify');
+$mmcontainer.imagesLoaded(function(){
+  $mmcontainer.masonry({
     itemSelector : '.masonry-item',
     columnWidth: function( containerWidth ) {
       return containerWidth / 3;
