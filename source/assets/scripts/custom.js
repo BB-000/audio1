@@ -70,8 +70,8 @@ $(function() {
 
         $(this).append('<iframe class="yTube" frameborder="0" allowfullscreen="1" title="YouTube video player" src="http://www.youtube.com/embed/' + embedd + '?autoplay=1?enablejsapi=1"></iframe>');
         
-
-        console.log($(this).find('.yTube'));
+        onYouTubeIframeAPIReady; 
+        // console.log($(this).find('.yTube'));
 
         // $(this).find('.yTube').contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
 
