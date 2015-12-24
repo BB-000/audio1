@@ -174,8 +174,8 @@ button, input[type="submit"], .button {
 	}
 	&:hover {
 		
-  -webkit-filter: brightness(2);
-  filter: brightness(2);
+  // -webkit-filter: brightness(2);
+  // filter: brightness(2);
 	}
 
 	a {
@@ -283,7 +283,62 @@ header {
 	@include viewport(1000){
 		 background-position: -10px 0px;
 	}
+
 }
+
+.button-group {
+
+	position: fixed;
+	bottom: 0;
+	z-index: 1;
+	width: 100%;
+
+	@include viewport(660){
+		position: absolute;
+		bottom: 5px;
+		right: 0;
+
+		width: auto;
+	}
+
+	button {
+		margin: 4px 1% 0 0;
+	    width: 49%;
+	    float: left;
+
+		outline: none;
+		border: none;
+		border-radius: 5px;
+		padding: 4px 8px;
+
+		@include viewport(660){
+			width: auto;
+			margin: 0 5px;
+		}
+
+		// box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+		@include box-shadow(0px 0px 3px 0px rgba(0,0,0,0.75));
+
+		
+		&.activated {
+			@include box-shadow(0px 0px 10px 1px rgba(0,0,0,0.75));
+
+		}
+		&.activated.btn-g {
+			background-color: $dream;
+		}
+		&.activated.btn-b {
+			background-color: $dream;
+		}
+		&.activated.btn-d {
+			background-color: $dream;
+		}
+		&.activated.btn-c {
+			background-color: $dream;
+		}
+	}
+}
+
 
 .art {
 	.masonry-item { margin:0; }
@@ -294,12 +349,6 @@ header {
 	@include viewport(600){
 	font-size: 26px;
 }
-}
-
-.filter-button-group {
-	position: absolute;
-	bottom: 0;
-	right: 0;
 }
 
 
